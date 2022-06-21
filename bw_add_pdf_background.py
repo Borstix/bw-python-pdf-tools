@@ -55,6 +55,8 @@ def add_pdf_background(inputfile, background_file_first, background_file_followi
         with open(temp_file_name, "wb") as out:
             pdf_writer.write(out)
 
+        os.replace(temp_file_name, inputfile)
+
 
 argcount = len(sys.argv)
 if argcount < 3:
